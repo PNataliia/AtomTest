@@ -1,0 +1,416 @@
+@font-face {font-family: "Flama Basic Regular";
+    src: url("../fonts/FlamaBasicRegular/FlamaBasicRegular.eot"); /* IE9*/
+    src: url("../fonts/FlamaBasicRegular/FlamaBasicRegular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/FlamaBasicRegular/Flama-Basic-Regular.woff2") format("woff2"), /* chrome、firefox */
+    url("../fonts/FlamaBasicRegular/Flama-Basic-Regular.woff") format("woff"), /* chrome、firefox */
+    url("../fonts/FlamaBasicRegular/Flama-Basic-Regular.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("../fonts/FlamaBasicRegular/Flama-Basic-Regular.svg#Flama Basic Regular") format("svg"); /* iOS 4.1- */
+  }
+@font-face {font-family: "Flama Medium";
+    src: url("../fonts/FlamaMedium/Flama-Medium.eot"); /* IE9*/
+    src: url("../fonts/FlamaMedium/Flama-Medium.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/FlamaMedium/Flama-Medium.woff2") format("woff2"), /* chrome、firefox */
+    url("../fonts/FlamaMedium/Flama-Medium.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+}
+
+@font-face {
+    font-family:'Flama Book';
+    /* src:url('../fonts/FlamaBold/Flama-Bold.eot');
+    src:url('../fonts/FlamaBold/Flama-Bold?#iefix') format('embedded-opentype'),
+            url('../fonts/FlamaBold/Flama-Bold.woff2') format('woff2'),
+            url('../fonts/FlamaBold/Flama-Bold.ttf') format('truetype'); */
+    src:url('../fonts/FlamaBold/Flama-Book.eot');
+    src:url('../fonts/FlamaBold/Flama-Book?#iefix') format('embedded-opentype'),
+        url('../fonts/FlamaBold/Flama-Book.otf') format('opentype'),
+        url('../fonts/FlamaBold/Flama-Book.ttf') format('truetype');
+
+    font-weight:normal;
+    font-style:normal;
+}
+html,
+body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    line-height: normal;
+    font-family: 'Flama Book';
+    font-size: 14px;
+    background-color: #ffffff;
+    letter-spacing: 0;
+    color: #000000;
+}
+.wrapper{
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+}
+.section-container{
+    max-width: 1330px;
+    width: 100%;
+    padding: 21px 15px 0 15px;
+    display: flex;
+    /* justify-content: space-between; */
+    margin: 0 auto;
+}
+.header{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.search-form{
+    display: flex;
+    width: 600px;
+    position: absolute;
+    left: calc(50% - 300px);
+    top: 21px;
+    min-height: 1px;
+}
+.navbar-cart ul{
+    display: inline-flex;
+}
+.header-nav-item a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 13px;
+    font-size: 11px;
+}
+.icon-header-text{
+    padding-top: 5px;
+    color: #848484;
+}
+.header-nav-item img{
+    width: 20px;
+    height: 20px;
+}
+.input-container img{
+    position: absolute;
+    margin: 7px;
+    height: 24px;
+    left: 0;
+    top: 0;
+}
+.form-control-search{
+    font-family: 'Flama Book';
+    width: 600px;
+    border: none;
+    border-radius: 10px;
+    background: #f5f5f5;
+    height: 40px;
+    padding-left: 40px;
+}
+.main-nav{
+    padding: 0 0 21px 0;
+    margin: 0 auto;
+}
+
+.main-nav-list{
+    display: inline-flex;
+}
+.main-nav-list a{
+    font-family: 'Flama Basic Regular';
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    /* color: #000; */
+    padding: 0 15px;
+
+}
+.main-container{
+    border-top: 1px solid #ccc;
+}
+.main-content-list{
+    display: inline-flex;
+    padding: 10px 0;
+}
+.main-content-list li{
+    margin-right: 5px;  
+   
+}
+.main-content-list li a{
+    font-size: 14px;
+    /* color: #000; */
+}
+.main-content-list li a:last-child{
+    color: #808080;
+}
+
+/* ---- */
+.content-cart{
+    display: flex;
+    justify-content: space-between!important;
+    padding: 20px 0;
+}
+.product-left,
+.product-rigth{
+    display: flex;
+    flex-direction: column;
+    max-width: 49.99%;    
+}
+.product-rigth{
+    width: 460px;
+    max-width: 50%;
+}
+.product-left{
+    max-height: 570px;
+    height: 570px;
+}
+.name-product{
+  font-size: 22px;
+}
+.product-opinions{
+  display: flex;
+  justify-content: space-between;
+}
+
+.e-size-content{
+  border: 1px solid #B2B2B2;
+  border-radius: 10px;
+}
+.e-size-btn{
+  border: none;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+.e-size-list{
+  display: none;
+}
+
+
+
+/* ---- */
+.main-container.section-container{
+    flex-direction: column;
+    padding-top: 0;
+}
+.product-list.gallery{
+    display: flex;
+}
+.product-box{
+    padding-right: 40px;
+    font-family: 'Flama Book';
+    font-size: 15px;
+    letter-spacing: 0.15px;
+}
+.product-image{
+    position:relative;
+    display: flex;
+    align-items: center;
+    width: 245px;
+    height: 326px;
+    border: 1px solid #EFEFEF;
+}
+.product-image img{
+    max-width: 100%;
+    object-fit: cover;
+}
+.product-image .img-label{
+    position: absolute;
+    top:20px;
+    left: 0;
+    font-family: 'Flama Medium';
+    font-size: 14px;
+    color: #fff;
+    padding: 10px;
+    background-color: #000;
+    border-radius: 0px 6px 6px 0px;
+}
+
+.product-opinions-lisitng{
+  color: #808080;
+}
+.product-price-container{
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+}
+
+
+
+
+
+
+
+/*base styles for the document*/
+
+  
+  /*base styles for the document*/
+
+
+#sliderContent {
+  width: 100%;
+  height: auto;
+}
+
+#slider {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+#placer {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* styles for the slide */
+#slide {
+  display: flex;
+  flex-direction: row;
+  transform :255ms ease-in-out;
+}
+
+
+#next-button {
+  position: absolute;
+  display: flex;
+  right: 10px;
+}
+
+#next-button:hover {
+  fill: red;
+}
+
+#previous-button {
+  position: absolute;
+  display: flex;
+  left: 10px;
+}
+
+#previous-button:hover {
+  fill: red;
+}
+
+.product-box.prevSlide{
+display: none;
+}
+  
+.product-box.active{
+  display:block;
+}
+
+.with-product{
+  background-image:url('../img/svg/product_wish.svg');
+  width: 40px;
+  height: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.carousel-container{
+  display: flex;
+}
+
+
+.mySlides {
+  display: none;
+  width: 430px;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.demo {
+  position: relative;
+  width: 90px;
+  height: 120px;
+  margin: 0 0 10px 0;
+  border: 1px solid #EFEFEF;
+}
+.demo img{
+  position: relative;
+  width: 90px;
+  height: 120px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.carousel-btn{
+  position: absolute;
+  display: flex;
+}
+
+.leftside,
+.rightside {
+  position:relative;
+  display: flex;
+}
+.leftside{
+  flex-direction: column;
+  max-height: 570px;
+  overflow: hidden;
+
+}
+.mySlides img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border: 1px solid #EFEFEF;
+  margin: 0 20px;
+}
+.slider-btn{
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40px;
+    height: 100%;
+}
+
+.prev svg{
+  position: absolute;
+  top:0;
+  width: 40px;
+  height: 40px;
+  transform: rotate(-90deg);
+}   
+.next svg{
+  bottom:0;
+  width: 40px;
+  height: 40px;
+  transform: rotate(90deg);
+  position: absolute;
+} 
+
+.brand-carousel .carousel-container .rightside .next {
+  right: 15px;
+  border-radius: 3px 0 0 3px;
+}
+.brand-carousel .carousel-container .rightside .prev:hover,
+.brand-carousel .carousel-container .rightside .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
