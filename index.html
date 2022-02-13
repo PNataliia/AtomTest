@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Rowery</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/91c00be8c6.js" crossorigin="anonymous"></script>
+</head>
+<body>   
+    <header id="header">
+        <div class="container position-relative" >   
+            <div class="second-menu justify-content-between align-items-center d-flex">
+                <div class="logo d-none d-md-flex">
+                    <a href="#"> <img src="./img/logo_2.png" title="ROWERY" alt="Logo ROWERY">ROWERY</a>
+                </div>								
+                <div class="search-form d-none d-md-flex">
+                    <form action="/s" data-submit="once" method="get" accept-charset="utf-8">
+                        <div class="input-container" id="InputContainer1">
+                            <input name="search" type="text" class="form-control-search" placeholder="Czego szukasz?">					
+                            <img src="img/svg/search.svg" alt="search">
+                        </div>
+                    </form>			
+                </div>
+                <div class="navbar-cart">
+                    <ul class="navbar-cart-list">  
+                        <li class="header-nav-item d-md-none d-flex" >                           
+                            <a href="#" title="Logowanie i rejestracja">
+                                <img src="img/svg/search.svg" alt="search">
+                                <span class="icon-header-text d-none d-md-flex">Dominik</span>
+                            </a>                           
+                        </li>  
+                        <li class="header-nav-item" >                           
+                            <a href="#" title="Logowanie i rejestracja">
+                                <img src="img/svg/profil.svg" alt="logIn">
+                                <span class="icon-header-text d-none d-md-flex">Dominik</span>
+                            </a>                           
+                        </li>
+                        <li class="header-nav-item">                            
+                            <a href="#" title="Compare">
+                                <img src="img/svg/porownaj.svg" alt="Compare">
+                                <span class="icon-header-text d-none d-md-flex">Porównaj</span>
+                            </a>                         
+                        </li>
+                        <li class="header-nav-item">
+                            <a href="#" title="wishlist">
+                                <img src="img/svg/wish.svg" alt="wishlist">
+                                <span class="icon-header-text d-none d-md-flex">Lista życzeń</span>
+                            </a>
+                        </li>                                                           
+                        <li class="header-nav-item">
+                            <a data-target="cart-box" href="/koszyk" title="Koszyk">
+                                <img src="img/svg/card.svg" alt="koszyk">
+                                <span class="icon-header-text d-none d-md-flex">Koszyk</span>
+                            </a>                    
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="first-menu d-flex justify-content-md-center justify-content-between p-md-0 m-md-0 pt-2 m-0"> 
+                <div class="logo-movile d-md-none d-flex">
+                    <a href="#"> <img src="./img/logo_2.png" title="ROWERY" alt="Logo ROWERY">ROWERY</a>
+                </div>               
+                <nav class=" w-100 navbar navbar-expand-md p-0 m-0 justify-content-end justify-content-md-center d-flex" id="navbar">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">
+                            <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 406.8 406.8" style="enable-background:new 0 0 406.8 406.8;" xml:space="preserve">
+                                <rect x="31.3" y="309.2" class="st3" width="341.3" height="42.7"/>
+                                <rect x="31.3" y="181.2" class="st3" width="341.3" height="42.7"/>
+                                <rect x="31.3" y="53.2" class="st3" width="341.3" height="42.7"/>
+                            </svg>
+                       </span>
+                    </button> 
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">   
+                        <ul class="navbar-nav m-auto">
+                            <li class="nav-item"><a class="nav-link px-2 py-0" href="../rowery" title="rowery">rowery</a></li>
+                            <li class="nav-item"><a class="nav-link px-2 py-0" href="../akcesoria" title="akcesoria">akcesoria</a></li>
+                            <li class="nav-item"><a class="nav-link px-2 py-0" href="../części" title="części">części</a></li>
+                            <li class="nav-item"><a class="nav-link px-2 py-0" href="../odzież" title="odzież">odzież</a></li>
+                            <li class="nav-item"><a class="nav-link px-2 py-0" href="../serwis" title="serwis">serwis</a></li>
+                            <li class="nav-item"><a class="nav-link px-2 py-0" href="../marki" title="marki">marki</a></li>
+                            <li class="nav-item"><a class="nav-link px-2 py-0" href="../nowości" title="nowości">nowości</a></li>
+                            <li class="nav-item"><a class="nav-link px-2 py-0" href="../wypszedaże" title="wypszedaże">wyprzedaże</a><li>                    
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="main" class="main-container section-container">
+            <div class="container e">
+                <ul class="main-content-list">
+                    <li >
+                        <a href="#" title="Strona główna"> Strona główna</a>
+                        <span class="separator">></span>
+                    </li>                            
+                    <li>
+                        <a href="#" title="Rowery">Rowery</a>
+                        <span class="separator">></span>
+                    </li>
+                    <li><a>Rowery Turystyczne</a>
+                    </li>                     
+                </ul>             
+                <div class="content-cart d-flex flex-wrap">
+                    <div class="product-left col-12 col-md-6 p-0">
+                        <div class="carousel-container d-flex">
+                            <div class="col-2 p-0 leftside d-flex">
+                                <div class="demo"><img src="./img/rower.jpg" onclick="currentSlide(1)" alt="rower"></div>
+                                <div class="demo"><img src="./img/rower2.jpg" onclick="currentSlide(2)" alt="rower"></div>
+                                <div class="demo"><img src="./img/rower3.jpg" onclick="currentSlide(3)" alt="rower"></div>
+                                <div class="demo"><img src="./img/rower4.jpg" onclick="currentSlide(4)" alt="rower"></div>
+                                <div class="demo"><img src="./img/rower5.jpg" onclick="currentSlide(5)" alt="rower"></div>
+                                <div class="slider-btn d-flex">
+                                    <div class="prev"  onclick="plusSlides(-1)">
+                                        <svg id="Component_192_37"  viewBox="0 0 60 60">
+                                            <circle id="Ellipse_150" data-name="Ellipse 150" cx="30" cy="30" r="30" transform="translate(-0.06 -0.07)" fill="#f6f6f6"/>
+                                            <path id="Path_1089" data-name="Path 1089" d="M29.94.93a29,29,0,1,1-29,29,29.034,29.034,0,0,1,29-29m0-1a30,30,0,1,0,30,30,30,30,0,0,0-30-30Z" fill="#bebebe"/>
+                                            <path id="Path_1090" data-name="Path 1090" d="M26.33,41.68,23.8,39.16l9.22-9.23L23.8,20.71l2.53-2.53L38.08,29.93Z" transform="translate(0.06 0.07)"/>
+                                        </svg>
+                                    </div>
+                                    <div class="next" onclick="plusSlides(1)">
+                                        <svg id="Component_192_37"  viewBox="0 0 60 60">
+                                            <circle id="Ellipse_150" data-name="Ellipse 150" cx="30" cy="30" r="30" transform="translate(-0.06 -0.07)" fill="#f6f6f6"/>
+                                            <path id="Path_1089" data-name="Path 1089" d="M29.94.93a29,29,0,1,1-29,29,29.034,29.034,0,0,1,29-29m0-1a30,30,0,1,0,30,30,30,30,0,0,0-30-30Z" fill="#bebebe"/>
+                                            <path id="Path_1090" data-name="Path 1090" d="M26.33,41.68,23.8,39.16l9.22-9.23L23.8,20.71l2.53-2.53L38.08,29.93Z" transform="translate(0.06 0.07)"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-9 col-10 p-0 mx-md-3 rightside">
+                                <div class="mySlides"><img src="./img/rower.jpg"></div>
+                                <div class="mySlides"><img src="./img/rower2.jpg"></div>
+                                <div class="mySlides"><img src="./img/rower3.jpg"></div> 
+                                <div class="mySlides"><img src="./img/rower4.jpg"></div>
+                                <div class="mySlides"><img src="./img/rower5.jpg"></div>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-rigth col-12 col-md-6 p-md-0 pt-4 p-0 d-flex justify-content-end">
+                        <div class="col-xl-9  col-lg-12 align-items-end p-0">
+                            <div>
+                                <h2 class="name-product">Specialized Diverge Sport Carbon długa nazwa prod</h2>
+                                <div class="product-opinions d-flex justify-content-between py-2 align-items-end">
+                                    <span>TREK</span>
+                                    <div class="product-rating">
+                                        <span class="rating">
+                                            <span class="rating-item"><i class="fas fa-star"></i></span>
+                                            <span class="rating-item"><i class="fas fa-star"></i></span>
+                                            <span class="rating-item"><i class="fas fa-star"></i></span>
+                                            <span class="rating-item"><i class="fas fa-star"></i></span>
+                                            <span class="rating-item"><i class="far fa-star"></i></span>
+                                        </span>            
+                                        <a href="#" class="count">12 opinie</a>
+                                    </div>
+                                </div>
+                                <div class="product-price-container align-items-end pb-4" data-type="field-price-container" data-update="toggle">
+                                    <div class="" data-type="field-show-price" data-update="toggle">
+                                        <span class="base-price">1 869zł<span></span></span>
+                                        <span class="price">1 569zł</span>
+                                    </div>
+                                </div>
+                                <div class="e-color-content mb-2">
+                                    <button class="e-color-btn align-items-center" id="eColor" data-dropdown-color-btn>Kolor: 
+                                        <input id="dropdownEcolor" type="text" placeholder="zielony-czarny">
+                                        <span class="e-select"><img src="img/svg/arrow.svg" alt="arrow"></span>
+                                    </button>
+                                    <div class="e-color-list">
+                                        <div class="e-option d-inline-flex">czerwony</div>
+                                        <div class="e-option d-inline-flex">czarny</div>
+                                        <div class="e-option d-inline-flex">zielony</div>
+                                        <div class="e-option d-inline-flex">zielony-czarny</div>
+                                    </div>
+                                </div>
+                                <div class="e-size-content mb-3 pb-1">
+                                    <button class="e-size-btn"id="eSize" data-dropdown-size-btn>
+                                        <input id="dropdownEsize" type="text" placeholder="Wybierz dostępny rozmiar">
+                                        <span class="e-select"><img src="img/svg/arrow.svg" alt="arrow"></span>
+                                    </button>
+                                    <div class="e-size-list">
+                                        <div class="e-option d-inline-flex"><span class="e-size">S</span><span class="e-size-notifications">Powiadom mnie o dostępności</span></div>
+                                        <div class="e-option d-inline-flex"><span class="e-size">M</span><span class="e-size-notifications">Powiadom mnie o dostępności</span></div>
+                                        <div class="e-option d-inline-flex availability"><span class="e-size">L</span><span class="e-size-notifications">Powiadom mnie o dostępności</span></div>
+                                        <div class="e-option d-inline-flex"><span class="e-size">XL</span><span class="e-size-notifications">Powiadom mnie o dostępności</span></div>
+                                    </div>
+                                </div>
+                                <div class="size-tips-content mb-3 pb-2">
+                                    <img src="img/svg/liner_icon.svg"> 
+                                    <u class="size-tips pl-2">Wskazówki dotyczące rozmiarów</u>
+                                </div>
+                                <div class="add-cart-btn mb-3 relative d-flex justify-content-center align-items-center">
+                                    <span class="px-2">DODAJ DO KOSZYKA</span>                                            
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22.086" height="25.449" viewBox="0 0 22.086 25.449">
+                                        <path id="Path_1103" data-name="Path 1103" d="M18.585,34.8H3.5A3.505,3.505,0,0,1,0,31.3V14.7H22.086V31.3A3.505,3.505,0,0,1,18.585,34.8ZM1.818,16.518V31.3A1.687,1.687,0,0,0,3.5,32.987h15.08A1.687,1.687,0,0,0,20.265,31.3V16.518Z" transform="translate(0 -9.355)"/>
+                                        <path id="Path_1104" data-name="Path 1104" d="M26.644,11.6H24.826V2.945A1.128,1.128,0,0,0,23.7,1.818H18.315a1.128,1.128,0,0,0-1.127,1.127V11.6H15.37V2.945A2.949,2.949,0,0,1,18.315,0H23.7a2.949,2.949,0,0,1,2.945,2.945Z" transform="translate(-9.782)"/>
+                                    </svg>
+                                </div>
+                                <div class="add-wish-btn mb-2 position-relative d-flex justify-content-center align-items-center">
+                                    <span class="px-2">DODAJ DO ULUBIONYCH</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+                                        <rect width="40" height="40" rx="20"fill="none" stroke="#efefef" />
+                                        <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" fill="none"/>
+                                        <path class="red-heart" id="Path_1101" transform="translate(11.43 13)" data-name="Path 1101" d="M16.791,1.272a4.67,4.67,0,0,0-6.622.207l-.245.264V1.737l-.417.442L9.1,1.743h0l-.245-.261a4.684,4.684,0,0,0-8.1,3.084A4.7,4.7,0,0,0,2.021,7.941L9.1,15.511l.405.434.011-.011.011.009,7.472-8a4.739,4.739,0,0,0-.205-6.669ZM5.433,1.416c.034,0,.071,0,.106,0A3.252,3.252,0,0,1,7.824,2.455L9.381,4.124l.131.132,1.683-1.8a3.273,3.273,0,0,1,5.66,2.154,3.288,3.288,0,0,1-.887,2.361L9.507,13.88,3.048,6.967A3.292,3.292,0,0,1,5.433,1.416Z"/>
+                                    </svg>
+                                </div>
+                                <div class="add-wish-btn mb-3 pl-4 position-relative d-flex">
+                                    <span>Kod produktu: <span class="font-weight-bold">CDN20872</span></span>
+                                </div>
+                                <div class="availabilitye-check-content mb-3 pl-4">
+                                    <span> <i class="fas fa-check"></i> </span>
+                                    <u class="size-tips pl-2">Dostępność: <span class="font-weight-bold">24 szt.</span> </u>
+                                </div>
+                                <div class="size-tips-content mb-3 pl-4">
+                                    <img src="img/svg/time-icon.svg"> 
+                                    <u class="size-tips pl-2">Czas realizacji: <span class="font-weight-bold">wysyłamy dzisiaj</span></u>
+                                </div>
+                                <div class="size-tips-content auto mb-3 pl-4">
+                                    <img src="img/svg/auto-icon.svg"> 
+                                    <u class="size-tips pl-2">Koszt dostawy: <span class="font-weight-bold">od 8 zł</span></u>
+                                </div>
+                                <div class="size-tips-content mb-3 pl-4">
+                                    <img src="img/svg/porownaj.svg"><u class="size-tips pl-2">Dodaj do porównania</u>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div id="accordion">
+                                    <div class="acordion-element">
+                                        <div id="headingOne">
+                                            <h5 class="mb-0 py-4 pl-4 position-relative">
+                                            <button class="btn collapsed p-0 m-0" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"> OPIS
+                                                <img class="accordion-btn" src="img/svg/arrow.svg" alt="arrow">
+                                            </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                            <p class="card-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, nobis earum. Eos maxime explicabo deserunt alias non quidem voluptate perferendis repellendus adipisci saepe suscipit ea, quas pariatur nobis obcaecati itaque.</p>
+                                        </div>
+                                    </div>
+                                    <div class="acordion-element">
+                                        <div id="headingTwo">
+                                            <h5 class="mb-0 py-4 pl-4 position-relative">
+                                                <button class="btn collapsed p-0 m-0" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> SZCZEGÓŁY
+                                                <img class="accordion-btn" src="img/svg/arrow.svg" alt="arrow">
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                            <p class="card-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, nobis earum. Eos maxime explicabo deserunt alias non quidem voluptate perferendis repellendus adipisci saepe suscipit ea, quas pariatur nobis obcaecati itaque.</p>
+                                        </div>                                          
+                                    </div>
+                                    <div class="acordion-element">
+                                        <div id="headingThree">
+                                            <h5 class="mb-0 py-4 pl-4 position-relative">
+                                                <button class="btn collapsed p-0 m-0" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> CZAS I KOSZT DOSTAWY
+                                                <img class="accordion-btn" src="img/svg/arrow.svg" alt="arrow">
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                            <p class="card-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, nobis earum. Eos maxime explicabo deserunt alias non quidem voluptate perferendis repellendus adipisci saepe suscipit ea, quas pariatur nobis obcaecati itaque.</p>
+                                        </div>
+                                    </div>
+                                    <div class="acordion-element">
+                                        <div class="" id="headingfour">
+                                            <h5 class="mb-0 py-4 pl-4 position-relative">
+                                            <button class="btn collapsed p-0 m-0" data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">  OPINIE (12)
+                                                <img class="accordion-btn" src="img/svg/arrow.svg" alt="arrow">
+                                            </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordion">
+                                            <p class="card-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, nobis earum. Eos maxime explicabo deserunt alias non quidem voluptate perferendis repellendus adipisci saepe suscipit ea, quas pariatur nobis obcaecati itaque.</p>
+                                        </div>
+                                    </div>
+                                    <div class="acordion-element">
+                                        <div  id="headingfive">
+                                            <h5 class="mb-0 py-4 pl-4 position-relative">
+                                                <button class="btn collapsed p-0 m-0" data-toggle="collapse"  data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive"> ZAPYTAJ O PRODUKT
+                                                    <img class="accordion-btn" src="img/svg/arrow.svg" alt="arrow">
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapsefive" class="collapse" aria-labelledby="headingfive" data-parent="#accordion">
+                                            <p class="card-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, nobis earum. Eos maxime explicabo deserunt alias non quidem voluptate perferendis repellendus adipisci saepe suscipit ea, quas pariatur nobis obcaecati itaque.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content-multy-product">
+            <h3 class="pb-4">POLECANE W RÓWNIEŻ</h3>
+            <div class="slider">
+                <ul class="product-list gallery d-flex">
+                    <li class="product-box">
+                        <div class="product-image">
+                            <img alt="rower" class="" src="./img/rower.jpg">
+                            <div class="img-label">Bestseller</div>	                                                                                           
+                        </div>
+                        <div class="single_product_box">
+                            <div class="change-slide-box d-flex pb-1 pt-3">
+                                <span class="rating-box invisible">Średnia ocena
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                </span>
+                                <span class="oftenBy-box d-none">Często kupowane</span>
+                            </div>
+                            <h2 class="product-name pb-2 mb-1 pb-2 mb-1">TREK Hexagon 1.0 2019 czarny <span>Drugi wiersz</span></h2>
+                            <div class="product-opinions-lisitng">TREK</div>
+                            <div class="product-price-container d-flex justify-content-between align-items-center">
+                                <span class="slide-price">3 869 zł</span>
+                                <div class="with-product"> </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-box">
+                        <div class="product-image">
+                            <img alt="rower" class="" src="./img/rower.jpg">
+                            <div class="img-label">Bestseller</div>	                                                                                           
+                        </div>
+                        <div class="single-product-box">
+                            <div class="change-slide-box d-flex pb-1 pt-3">
+                                <span class="rating-box invisible">Średnia ocena
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                </span>
+                                <span class="oftenBy-box d-none">Często kupowane</span>
+                            </div>
+                            <h2 class="product-name pb-2 mb-1">TREK Hexagon 1.0 2019 czarny <span class="invisible">Drugi wiersz</span></h2>
+                            <div class="product-opinions-lisitng">KROSS</div>
+                            <div class="product-price-container d-flex justify-content-between align-items-center">
+                                <span class="slide-price">11 869 zł</span>
+                                <div class="with-product"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-box">
+                        <div class="product-image" >
+                            <img alt="rower" class="" src="./img/rower.jpg">
+                            <div class="img-label hiden">Bestseller</div>	                                                                                           
+                        </div>
+                        <div class="single_product_box">
+                            <div class="change-slide-box d-flex pb-1 pt-3">
+                                <span class="rating-box invisible">Średnia ocena
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                </span>
+                                <span class="oftenBy-box d-none">Często kupowane</span>
+                            </div>
+                            <h2 class="product-name pb-2 mb-1">TREK Hexagon 1.0 2019 czarny <span class="invisible">Drugi wiersz</span></h2>
+                            <div class="product-opinions-lisitng">SPECIALIZED</div>
+                            <div class="product-price-container d-flex justify-content-between align-items-center">
+                                <span class="slide-price">11 869 zł</span>
+                                <div class="with-product"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-box">
+                        <div class="product-image">
+                            <img alt="rower" class="" src="./img/rower.jpg">
+                            <div class="img-label">Bestseller</div>	                                                                                           
+                        </div>
+                        <div class="single_product_box">
+                            <div class="change-slide-box d-flex pb-1 pt-3">
+                                <span class="rating-box">Średnia ocena
+                                    <span class="rating-item selected"><i class="fas fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="fas fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="fas fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="fas fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                </span>
+                                <span class="oftenBy-box d-none">Często kupowane</span>
+                            </div>
+                            <h2 class="product-name pb-2 mb-1">TREK Hexagon 1.0 2019 czarny <span>Drugi wiersz</span></h2>
+                            <div class="product-opinions-lisitng">TREK</div>
+                            <div class="product-price-container d-flex justify-content-between align-items-center">
+                                <span class="slide-price">3 869 zł</span>
+                                <div class="with-product"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-box">
+                        <div class="product-image">
+                            <img alt="rower" class="" src="./img/rower.jpg">
+                            <div class="img-label">Bestseller</div>	                                                                                           
+                        </div>
+                        <div class="single_product_box">
+                            <div class="change-slide-box d-flex pb-1 pt-3">
+                                <span class="rating-box d-none">Średnia ocena
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                </span>
+                                <span class="oftenBy-box ">Często kupowane</span>
+                            </div>
+                            <h2 class="product-name pb-2 mb-1">TREK Hexagon 1.0 2019 czarny <span>Drugi wiersz</span></h2>
+                            <div class="product-opinions-lisitng">CANNONDALE</div>
+                            <div class="product-price-container d-flex justify-content-between align-items-center">
+                                <span class="slide-price">3 869 zł</span>
+                                <div class="with-product"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-box">
+                        <div class="product-image">
+                            <img alt="rower" class="" src="./img/rower.jpg">
+                            <div class="img-label hiden">Bestseller</div>	                                                                                           
+                        </div>
+                        <div class="single_product_box">
+                            <div class="change-slide-box d-flex pb-1 pt-3">
+                                <span class="rating-box invisible">Średnia ocena
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                </span>
+                                <span class="oftenBy-box d-none">Często kupowane</span>
+                            </div>
+                            <h2 class="product-name pb-2 mb-1">TREK Hexagon 1.0 2019 czarny <span class="invisible">Drugi wiersz</span></h2>
+                            <div class="product-opinions-lisitng">TREK</div>
+                            <div class="product-price-container d-flex justify-content-between align-items-center">
+                                <span class="slide-price">3 869 zł</span>
+                                <div class="with-product"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-box">
+                        <div class="product-image">
+                            <img alt="rower" class="" src="./img/rower.jpg">
+                            <div class="img-label">Bestseller</div>	                                                                                           
+                        </div>
+                        <div class="single_product_box">
+                            <div class="change-slide-box d-flex pb-1 pt-3">
+                                <span class="rating-box invisible">Średnia ocena
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                </span>
+                                <span class="oftenBy-box d-none">Często kupowane</span>
+                            </div>
+                            <h2 class="product-name pb-2 mb-1">TREK Hexagon 1.0 2019 czarny <span class="invisible">Drugi wiersz</span></h2>
+                            <div class="product-opinions-lisitng">TREK</div>
+                            <div class="product-price-container d-flex justify-content-between align-items-center">
+                                <span class="slide-price">3 869 zł</span>
+                                <div class="with-product"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-box">
+                        <div class="product-image">
+                            <img alt="rower" class="" src="./img/rower.jpg">
+                            <div class="img-label hiden">Bestseller</div>	                                                                                           
+                        </div>
+                        <div class="single_product_box">
+                            <div class="change-slide-box d-flex pb-1 pt-3">
+                                <span class="rating-box d-none">Średnia ocena
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                </span>
+                                <span class="oftenBy-box ">Często kupowane</span>
+                            </div>
+                            <h2 class="product-name pb-2 mb-1">TREK Hexagon 1.0 2019 czarny <span class="invisible">Drugi wiersz</span></h2>
+                            <div class="product-opinions-lisitng">TREK</div>
+                            <div class="product-price-container d-flex justify-content-between align-items-center">
+                                <span class="slide-price">3 869 zł</span>
+                                <div class="with-product"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-box">
+                        <div class="product-image">
+                            <img alt="rewer" class="" src="./img/rower.jpg">
+                            <div class="img-label hiden">Bestseller</div>	                                                                                           
+                        </div>
+                        <div class="single_product_box">
+                            <div class="change-slide-box d-flex pb-1 pt-3">
+                                <span class="rating-box">Średnia ocena
+                                    <span class="rating-item selected"><i class="fas fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="fas fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="fas fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="fas fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                </span>
+                                <span class="oftenBy-box d-none">Często kupowane</span>
+                            </div>
+                            <h2 class="product-name pb-2 mb-1">TREK Hexagon 1.0 2019 czarny <span>Drugi wiersz</span></h2>
+                            <div class="product-opinions-lisitng">TREK</div>
+                            <div class="product-price-container d-flex justify-content-between align-items-center">
+                                <span class="slide-price">3 869 zł</span>
+                                <div class="with-product"></div>
+                            </div>
+                        </div>
+                    </li>                                          
+                </ul>
+                <div class="placer">
+                    <div id="next-button" class="nav-button">
+                        <svg id="Component_192_37" width="60" height="60" viewBox="0 0 60 60">
+                            <circle id="Ellipse_150" data-name="Ellipse 150" cx="30" cy="30" r="30" transform="translate(-0.06 -0.07)" fill="#f6f6f6"/>
+                            <path id="Path_1089" data-name="Path 1089" d="M29.94.93a29,29,0,1,1-29,29,29.034,29.034,0,0,1,29-29m0-1a30,30,0,1,0,30,30,30,30,0,0,0-30-30Z" fill="#bebebe"/>
+                            <path id="Path_1090" data-name="Path 1090" d="M26.33,41.68,23.8,39.16l9.22-9.23L23.8,20.71l2.53-2.53L38.08,29.93Z" transform="translate(0.06 0.07)"/>
+                        </svg>
+                    </div>
+                <div>
+            </div>
+        </section>
+        
+        <section class="content-multy-product">
+            <h3 class="pb-4">POLECANE W RÓWNIEŻ</h3>
+            <div class="slider">
+                <ul class="product-list gallery d-flex">
+                    <li class="product-box">
+                        <div class="product-image">
+                            <img alt="rower" class="" src="./img/rower.jpg">
+                            <div class="img-label">Bestseller</div>	                                                                                           
+                        </div>
+                        <div class="single_product_box">
+                            <div class="change-slide-box d-flex pb-1 pt-3">
+                                <span class="rating-box invisible">Średnia ocena
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                </span>
+                                <span class="oftenBy-box d-none">Często kupowane</span>
+                            </div>
+                            <h2 class="product-name pb-2 mb-1 pb-2 mb-1">TREK Hexagon 1.0 2019 czarny <span>Drugi wiersz</span></h2>
+                            <div class="product-opinions-lisitng">TREK</div>
+                            <div class="product-price-container d-flex justify-content-between align-items-center">
+                                <span class="slide-price">3 869 zł</span>
+                                <div class="with-product"> </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-box">
+                        <div class="product-image">
+                            <img alt="rower" class="" src="./img/rower.jpg">
+                            <div class="img-label">Bestseller</div>	                                                                                           
+                        </div>
+                        <div class="single-product-box">
+                            <div class="change-slide-box d-flex pb-1 pt-3">
+                                <span class="rating-box invisible">Średnia ocena
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                </span>
+                                <span class="oftenBy-box d-none">Często kupowane</span>
+                            </div>
+                            <h2 class="product-name pb-2 mb-1">TREK Hexagon 1.0 2019 czarny <span class="invisible">Drugi wiersz</span></h2>
+                            <div class="product-opinions-lisitng">KROSS</div>
+                            <div class="product-price-container d-flex justify-content-between align-items-center">
+                                <span class="slide-price">11 869 zł</span>
+                                <div class="with-product"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-box">
+                        <div class="product-image" >
+                            <img alt="rower" class="" src="./img/rower.jpg">
+                            <div class="img-label hiden">Bestseller</div>	                                                                                           
+                        </div>
+                        <div class="single_product_box">
+                            <div class="change-slide-box d-flex pb-1 pt-3">
+                                <span class="rating-box invisible">Średnia ocena
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                </span>
+                                <span class="oftenBy-box d-none">Często kupowane</span>
+                            </div>
+                            <h2 class="product-name pb-2 mb-1">TREK Hexagon 1.0 2019 czarny <span class="invisible">Drugi wiersz</span></h2>
+                            <div class="product-opinions-lisitng">SPECIALIZED</div>
+                            <div class="product-price-container d-flex justify-content-between align-items-center">
+                                <span class="slide-price">11 869 zł</span>
+                                <div class="with-product"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-box">
+                        <div class="product-image">
+                            <img alt="rower" class="" src="./img/rower.jpg">
+                            <div class="img-label">Bestseller</div>	                                                                                           
+                        </div>
+                        <div class="single_product_box">
+                            <div class="change-slide-box d-flex pb-1 pt-3">
+                                <span class="rating-box">Średnia ocena
+                                    <span class="rating-item selected"><i class="fas fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="fas fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="fas fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="fas fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                </span>
+                                <span class="oftenBy-box d-none">Często kupowane</span>
+                            </div>
+                            <h2 class="product-name pb-2 mb-1">TREK Hexagon 1.0 2019 czarny <span>Drugi wiersz</span></h2>
+                            <div class="product-opinions-lisitng">TREK</div>
+                            <div class="product-price-container d-flex justify-content-between align-items-center">
+                                <span class="slide-price">3 869 zł</span>
+                                <div class="with-product"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-box">
+                        <div class="product-image">
+                            <img alt="rower" class="" src="./img/rower.jpg">
+                            <div class="img-label">Bestseller</div>	                                                                                           
+                        </div>
+                        <div class="single_product_box">
+                            <div class="change-slide-box d-flex pb-1 pt-3">
+                                <span class="rating-box d-none">Średnia ocena
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                </span>
+                                <span class="oftenBy-box ">Często kupowane</span>
+                            </div>
+                            <h2 class="product-name pb-2 mb-1">TREK Hexagon 1.0 2019 czarny <span>Drugi wiersz</span></h2>
+                            <div class="product-opinions-lisitng">CANNONDALE</div>
+                            <div class="product-price-container d-flex justify-content-between align-items-center">
+                                <span class="slide-price">3 869 zł</span>
+                                <div class="with-product"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-box">
+                        <div class="product-image">
+                            <img alt="rower" class="" src="./img/rower.jpg">
+                            <div class="img-label hiden">Bestseller</div>	                                                                                           
+                        </div>
+                        <div class="single_product_box">
+                            <div class="change-slide-box d-flex pb-1 pt-3">
+                                <span class="rating-box invisible">Średnia ocena
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                </span>
+                                <span class="oftenBy-box d-none">Często kupowane</span>
+                            </div>
+                            <h2 class="product-name pb-2 mb-1">TREK Hexagon 1.0 2019 czarny <span class="invisible">Drugi wiersz</span></h2>
+                            <div class="product-opinions-lisitng">TREK</div>
+                            <div class="product-price-container d-flex justify-content-between align-items-center">
+                                <span class="slide-price">3 869 zł</span>
+                                <div class="with-product"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-box">
+                        <div class="product-image">
+                            <img alt="rower" class="" src="./img/rower.jpg">
+                            <div class="img-label">Bestseller</div>	                                                                                           
+                        </div>
+                        <div class="single_product_box">
+                            <div class="change-slide-box d-flex pb-1 pt-3">
+                                <span class="rating-box invisible">Średnia ocena
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                </span>
+                                <span class="oftenBy-box d-none">Często kupowane</span>
+                            </div>
+                            <h2 class="product-name pb-2 mb-1">TREK Hexagon 1.0 2019 czarny <span class="invisible">Drugi wiersz</span></h2>
+                            <div class="product-opinions-lisitng">TREK</div>
+                            <div class="product-price-container d-flex justify-content-between align-items-center">
+                                <span class="slide-price">3 869 zł</span>
+                                <div class="with-product"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-box">
+                        <div class="product-image">
+                            <img alt="rower" class="" src="./img/rower.jpg">
+                            <div class="img-label hiden">Bestseller</div>	                                                                                           
+                        </div>
+                        <div class="single_product_box">
+                            <div class="change-slide-box d-flex pb-1 pt-3">
+                                <span class="rating-box d-none">Średnia ocena
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                </span>
+                                <span class="oftenBy-box ">Często kupowane</span>
+                            </div>
+                            <h2 class="product-name pb-2 mb-1">TREK Hexagon 1.0 2019 czarny <span class="invisible">Drugi wiersz</span></h2>
+                            <div class="product-opinions-lisitng">TREK</div>
+                            <div class="product-price-container d-flex justify-content-between align-items-center">
+                                <span class="slide-price">3 869 zł</span>
+                                <div class="with-product"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-box">
+                        <div class="product-image">
+                            <img alt="rewer" class="" src="./img/rower.jpg">
+                            <div class="img-label hiden">Bestseller</div>	                                                                                           
+                        </div>
+                        <div class="single_product_box">
+                            <div class="change-slide-box d-flex pb-1 pt-3">
+                                <span class="rating-box">Średnia ocena
+                                    <span class="rating-item selected"><i class="fas fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="fas fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="fas fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="fas fa-star"></i></span>
+                                    <span class="rating-item selected"><i class="far fa-star"></i></span>
+                                </span>
+                                <span class="oftenBy-box d-none">Często kupowane</span>
+                            </div>
+                            <h2 class="product-name pb-2 mb-1">TREK Hexagon 1.0 2019 czarny <span>Drugi wiersz</span></h2>
+                            <div class="product-opinions-lisitng">TREK</div>
+                            <div class="product-price-container d-flex justify-content-between align-items-center">
+                                <span class="slide-price">3 869 zł</span>
+                                <div class="with-product"></div>
+                            </div>
+                        </div>
+                    </li>                                          
+                </ul>
+                <div class="placer">
+                    <div id="next-button" class="nav-button">
+                        <svg id="Component_192_37" width="60" height="60" viewBox="0 0 60 60">
+                            <circle id="Ellipse_150" data-name="Ellipse 150" cx="30" cy="30" r="30" transform="translate(-0.06 -0.07)" fill="#f6f6f6"/>
+                            <path id="Path_1089" data-name="Path 1089" d="M29.94.93a29,29,0,1,1-29,29,29.034,29.034,0,0,1,29-29m0-1a30,30,0,1,0,30,30,30,30,0,0,0-30-30Z" fill="#bebebe"/>
+                            <path id="Path_1090" data-name="Path 1090" d="M26.33,41.68,23.8,39.16l9.22-9.23L23.8,20.71l2.53-2.53L38.08,29.93Z" transform="translate(0.06 0.07)"/>
+                        </svg>
+                    </div>
+                <div>
+            </div>
+        </section>
+    </main>
+
+    <section id="NewsletterBox">
+            <div class="container newsletter-box">
+                <div class="newsletter-box d-flex flex-wrap py-4 my-2">
+                    <div class="col-md-6 col-12 mb-3 mb-md-0 p-0"> 
+                        <h5 class="box-header pb-2 mb-1">Zdobądź <span>10%</span>zniżki na pierwsze zamówienie!</h5>
+                        <span class="newsletter-box-text">Zapisz się do naszego newslettera, otrzymuj powiadomienia o nowościach i promocjach </span>
+                    </div>
+                    <div class="box-content col-md-6 col-12 p-0">
+                        <form action="" class="newsletter-form d-flex" id="SubscriberHomeForm" method="post">
+                            <input name="" type="text" class="form-control" aria-label="Twój adres e-mail" placeholder="Twój adres e-mail" maxlength="100" id="SubscriberEmail">				
+                            <a class="btn btn-form-newsletter" type="submit">ZAPISZ SIĘ</a>
+                        </form>			
+                        <div class="newsletter-label pt-3">Twoje dane będziemy przetwarzać zgodnie z naszą <a href="/polityka-plikow-cookies.html">politykę prywatności</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+ 
+    <footer id="footer">
+        <div class="container">
+            <div class="row my-md-1 py-md-5 my-1 py-0 border-footer-top" data-aos="fade-up">
+                <div class="col-md-3 col-12 pt-md-0 pt-4">
+                    <h4 class="footer-header d-none d-md-flex pb-md-4 mb-md-3 pb-3">INFORMACJE</h4>
+                    <div class="footer-header-response d-flex d-md-none pb-4">INFORMACJE</div>
+                    <ul class="footer-list d-none d-md-flex flex-column mb-3 mb-md-3">                           
+                        <li class="pb-md-2 mb-md-2 pb-1"><a href="#">Regulamin</a></li>
+                        <li class="py-md-2 mb-md-2 py-1"><a href="#">O firmie</a></li>
+                        <li class="py-md-2 mb-md-2 py-1"><a href="#">Kontakt</a></li>
+                        <li class="py-md-2 mb-md-2 py-1"><a href="#">Polityka prywatności</a></li>
+                        <li class="pt-2 mb-2"><a href="#">Dostęp do danych osobowych</a></li>  
+                    </ul>       
+                </div>                       
+                <div class="col-md-3 col-12 pt-md-0 pt-4">
+                    <h4 class="footer-header d-none d-md-flex pb-md-4 mb-md-3 pb-3">POMOC</h4>
+                    <div class="footer-header-response d-flex d-md-none pb-4">POMOC</div>
+                    <ul class="footer-list d-none d-md-flex flex-column mb-3 mb-md-3">                             
+                        <li class="pb-md-2 mb-md-2 pb-1"><a href="#">FAQ</a></li>                            
+                        <li class="py-md-2 mb-md-2 py-1"><a href="#">Dostawa i płatność</a></li>
+                        <li class="py-md-2 mb-md-2 py-1"><a href="#">Zwrot</a></li>
+                        <li class="pb-md-2 mb-md-2 pb-1"><a href="#">Reklamacja</a></li>
+                    </ul>       
+                </div>  
+                <div class="col-md-3 col-12 pt-md-0 pt-4">
+                    <h4 class="footer-header d-none d-md-flex pb-md-4 mb-md-3 pb-3">TWOJE KONTO</h4>
+                    <div class="footer-header-response d-flex d-md-none pb-4">TWOJE KONTO</div>
+                    <ul class="footer-list d-none d-md-flex flex-column mb-3 mb-md-3">                           
+                        <li class="pb-md-2 mb-md-2 pb-1"><a href="badania-rozwoj.html#dzialalnosc-rd">Twoje konto</a></li>
+                        <li class="py-md-2 mb-md-2 py-1"><a href="badania-rozwoj.html#innowacyjne-rozwiazania">Twoje zamówienia</a></li>
+                        <li class="py-md-2 mb-md-2 py-1"><a href="badania-rozwoj.html#partnerstwa-technologiczne">Rejestracja</a></li>
+                        <li class="pb-md-2 mb-md-2 pb-1"><a href="badania-rozwoj.html#dzialalnosc-naukowa">Logowanie</a></li>
+                    </ul>       
+                </div> 
+                <div class="col-md-3 col-12 pt-md-0 pt-4 ">
+                    <h4 class="footer-header pb-md-4 mb-md-3 pb-3">DOŁĄCZ DO NAS NA</h4>
+                    <ul class="footer-list mb-3 mb-md-3">
+                        <li>
+                            <a href="https://www.facebook.com/AtomStorePL" onclick="window.open(this.href);return false;"><i class="fab fa-facebook-square"></i></a>
+                            <a href="https://www.instagram.com/atomstore.pl/" onclick="window.open(this.href);return false;"><i class="fab fa-instagram-square"></i></a>
+                        </li>
+                    </ul>       
+                </div>  
+            </div>   
+        </div>             
+        <div class=" border-footer-bottom pt-3" >
+            <div class="container d-flex flex-md-nowrap flex-wrap-reverse">
+                <div class="col-md-6 col-12 p-0 d-flex align-items-center copyright">© Copyright Marka 2021 | Powered by <span class="pl-1"> AtomStore</span></div>  
+                <div class="col-md-6 col-12 p-0 d-flex align-items-center justify-content-md-end">
+                    <div class="col-4 p-md-0 pb-2 relative d-inline-flex align-items-center justify-content-end">
+                        <div class="pr-2 mr-1 country">Kraj</div>
+                        <select class="selectpicker d-flex col-10 p-0" >
+                            <option>Polska</option>
+                            <option>Włochy</option>
+                            <option>Niemcy</option>
+                        </select>
+                    </div>
+                </div> 
+            </div>              
+        </div>
+    </footer>
+       
+    <script src="js/jquery-3.4.1.min.js" ></script>
+    <script src="js/bootstrap.bundle.min.js" ></script>
+    <script src="js/bootstrap.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js"></script>
+    
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
